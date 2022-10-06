@@ -5,6 +5,8 @@ helm repo add prometheus-community https://prometheus-community.github.io/helm-c
 helm repo update
 helm install prometheus prometheus-community/prometheus
 kubectl expose service prometheus-server --type=NodePort --target-port=9090 --name=prometheus-server-ext
+
+* Using minikube:
 minikube service prometheus-server-ext
 
 
@@ -28,5 +30,3 @@ kubectl get secret --namespace default grafana -o jsonpath="{.data.admin-passwor
 ----------------------------------------------------------
 
 Dashboards: https://grafana.com/grafana/dashboards/6417
-Grafana playlist: https://www.youtube.com/playlist?list=PLVx1qovxj-akOGKSoQ5sGc5ZRfH8Tpnow
-Prometheus Playlist: https://www.youtube.com/playlist?list=PLVx1qovxj-anCTn6um3BDsoHnIr0O2tz3
